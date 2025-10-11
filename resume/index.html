@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Lee: Resume</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
 <body>
@@ -13,94 +14,105 @@
         <a href="../index.html">Home</a>
         <a href="https://github.com/musubi3" target="_blank">GitHub</a>
         <a href="../projects/index.html">Projects</a>
-        <a href="index.html">Resume</a>
+        <a href="index.html" class="current">Resume</a>
         <a href="../contact/index.html">Contact</a>
     </nav>
+    <div class="resume">
+        <h1>Resume</h1>
 
-    <h1>Resume</h1>
+        <section class="education">
+            <h2>Education</h2>
 
-    <section>
-        <h2>Education</h2>
+            <article>
+                <header>
+                    <h3>City College of San Francisco</h3>
+                    <p>General Education & Introductory Data Science Courses</p>
+                    <time datetime="2021-08">Aug 2021</time> – <time datetime="2024-06">Jun 2024</time>
+                </header>
+                <ul>
+                    <li>Lower-division general education requirements</li>
+                    <li>Introductory data science coursework (Python, statistics, data analysis)</li>
+                </ul>
+            </article>
 
-        <article>
-            <header>
-                <h3>City College of San Francisco</h3>
-                <p>General Education & Introductory Data Science Courses</p>
-                <time datetime="2021-08">Aug 2021</time> – <time datetime="2024-06">Jun 2024</time>
-            </header>
-            <ul>
-                <li>Lower-division general education requirements</li>
-                <li>Introductory data science coursework (Python, statistics, data analysis)</li>
+            <article>
+                <header>
+                    <h3>University of California, San Diego</h3>
+                    <p>B.S. Data Science (in progress)</p>
+                    <time datetime="2024-09">Sep 2024</time> – <time datetime="2026-12">Dec 2026 (expected)</time>
+                </header>
+                <ul>
+                    <li>Skills Learned: Python Programming, Statistical Analysis, Data Visualization, Machine Learning,
+                        Data Management</li>
+                    <li>
+                        Relevant coursework:
+                        <ul>
+                            <li>Introduction to Data Science</li>
+                            <li>Theoretical Foundations of Data Science</li>
+                            <li>Data Structures/Algorithms for Data Science</li>
+                            <li>Data Science in Practice</li>
+                            <li>Introduction to Data Visualization</li>
+                            <li>Introduction to Data Management</li>
+                            <li>Probabilistic Modeling and ML</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="resume-projects">
+            <h2>Projects</h2>
+            <article>
+                <header>
+                    <h3>The Relationship Between Calories and Recipe Rating</h3>
+                </header>
+                <p>
+                    A data-driven analysis exploring how calories impact average recipe ratings, using
+                    <strong>Python</strong> and interactive plots.
+                    <br>
+                    <a href="https://musubi3.github.io/recipe-calories-relationship/" target="_blank">View Project</a>
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h3>Wave</h3>
+                </header>
+                <p>
+                    A simple 2D game I developed in <strong>Java</strong> during my junior year of high school.
+                    <br>
+                    <a href="https://musubi3.github.io/Wave/" target="_blank">View Project</a>
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h3>pokemon.js</h3>
+                </header>
+                <p>
+                    A <strong>Node.js</strong> module that makes interacting with PokéAPI easier.
+                    <br>
+                    <a href="https://musubi3.github.io/pokemon.js/" target="_blank">View Project</a>
+                </p>
+            </article>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li class="skill-tag skill-programming">Python</li>
+                <li class="skill-tag skill-programming">Java</li>
+                <li class="skill-tag skill-programming">JavaScript</li>
+                <li class="skill-tag skill-programming">Node.js</li>
+                <li class="skill-tag skill-web">HTML</li>
+                <li class="skill-tag skill-web">CSS</li>
+                <li class="skill-tag skill-tools">Git</li>
+                <li class="skill-tag skill-tools">pandas</li>
+                <li class="skill-tag skill-tools">BeautifulSoup</li>
+                <li class="skill-tag skill-tools">seaborn</li>
+                <li class="skill-tag skill-tools">plotly</li>
+                <li class="skill-tag skill-tools">scikit-learn</li>
             </ul>
-        </article>
-
-        <article>
-            <header>
-                <h3>University of California, San Diego</h3>
-                <p>B.S. Data Science (in progress)</p>
-                <time datetime="2024-09">Sep 2024</time> – <time datetime="2026-12">Dec 2026 (expected)</time>
-            </header>
-            <ul>
-                <li>Skills Learned: Python Programming, Statistical Analysis, Data Visualization, Machine Learning, Data Management</li>
-                <li>
-                    Relevant coursework:
-                    <ul>
-                        <li>Introduction to Data Science</li>
-                        <li>Theoretical Foundations of Data Science</li>
-                        <li>Data Structures/Algorithms for Data Science</li>
-                        <li>Data Science in Practice</li>
-                        <li>Introduction to Data Visualization</li>
-                        <li>Introduction to Data Management</li>
-                        <li>Probabilistic Modeling and ML</li>
-                    </ul>
-                </li>
-            </ul>
-        </article>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <article>
-            <header>
-                <h3>The Relationship Between Calories and Recipe Rating</h3>
-            </header>
-            <p>
-                A data-driven analysis exploring how calories impact average recipe ratings, using
-                <strong>Python</strong> and interactive plots.
-                <br>
-                <a href="https://musubi3.github.io/recipe-calories-relationship/" target="_blank">View Project</a>
-            </p>
-        </article>
-        <article>
-            <header>
-                <h3>Wave</h3>
-            </header>
-            <p>
-                A simple 2D game I developed in <strong>Java</strong> during my junior year of high school.
-                <br>
-                <a href="https://musubi3.github.io/Wave/" target="_blank">View Project</a>
-            </p>
-        </article>
-        <article>
-            <header>
-                <h3>pokemon.js</h3>
-            </header>
-            <p>
-                A <strong>Node.js</strong> module that makes interacting with PokéAPI easier.
-                <br>
-                <a href="https://musubi3.github.io/pokemon.js/" target="_blank">View Project</a>
-            </p>
-        </article>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming: Python, Java, JavaScript, Node.js</li>
-            <li>Web: HTML, CSS</li>
-            <li>Tools: Git, Python (pandas, BeautifulSoup, seaborn, plotly, scikit-learn)</li>
-        </ul>
-    </section>
+        </section>
+    </div>
 </body>
 
 </html>
