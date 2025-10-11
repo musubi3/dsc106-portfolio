@@ -1,16 +1,30 @@
+:root {
+  --color-accent: oklch(0.7686 0.1236 133.88);
+  --max-width: 100ch;
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
+  margin-top: 0;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.content {
   max-width: var(--max-width);
   margin-inline: max(1em, (100% - var(--max-width)) / 2);
-  margin-top: 0;
 }
 
 nav {
   display: flex;
   margin-bottom: 2em;
+  max-width: 125ch;
+  margin-inline: max(1em, (100% - 125ch) / 2);
   border-bottom: 1px solid oklch(80% 3% 200);
 }
 
@@ -128,13 +142,7 @@ h4 {
 h5, h6 {
   font-size: 110%;
 }
-
-img {
-  border-radius: 10px;
-}
-
 .resume {
-  max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -280,9 +288,4 @@ img {
 
 .resume strong {
   color: var(--color-accent);
-}
-
-:root {
-  --color-accent: oklch(0.7686 0.1236 133.88);
-  --max-width: 100ch;
 }
