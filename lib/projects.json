@@ -1,0 +1,86 @@
+[
+    {
+        "title": "The Relationship Between Calories and Recipe Rating",
+        "image": "https://store.cofo.edu/cdn/shop/files/cookbookopen.png?v=1696951540",
+        "description": "A data-driven analysis exploring how calories impact average recipe ratings, using Python and\n                      interactive plots.",
+        "link": "https://musubi3.github.io/recipe-calories-relationship/?theme=dark",
+        "year": "2025"
+    },
+    {
+        "title": "Wave",
+        "image": "https://i.postimg.cc/SNkLqJfF/gameplay.png",
+        "description": "A simple 2D game I developed during my junior year of high school.",
+        "link": "https://musubi3.github.io/Wave/?theme=dark",
+        "year": "2021"
+    },
+    {
+        "title": "pokemon.js",
+        "image": "https://assets1.ignimgs.com/2018/03/31/newgraphicsapr2018-1522532501148_160w.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "description": "A Node.js module that makes interacting with PokéAPI easier.",
+        "link": "https://musubi3.github.io/pokemon.js/?theme=dark",
+        "year": "2021"
+    },
+    {
+        "title": "Dolorem consequuntur asperiores ratione.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Temporibus consequatur assumenda voluptas numquam sed fugit quae neque quisquam eius necessitatibus\n                           nostrum dolorem labore illo ducimus asperiores sunt praesentium expedita aliquid porro aut,\n                           blanditiis culpa est at rem. Obcaecati.",
+        "link": "",
+        "year": "2020"
+    },
+    {
+        "title": "Repellat doloremque sit id?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Minus aspernatur consectetur quisquam eos accusantium sed rerum ex ea laborum amet autem molestiae\n                           ducimus veniam voluptas, impedit ullam dolores magnam? Amet cupiditate corrupti hic blanditiis ab\n                           accusamus impedit cumque?",
+        "link": "",
+        "year": "2020"
+    },
+    {
+        "title": "Magnam alias voluptatum explicabo.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Nobis voluptatem fuga dicta, vitae dolore illo perferendis sapiente accusantium porro maiores! Fuga\n                           distinctio nulla voluptate quis explicabo laboriosam delectus nisi quia necessitatibus, incidunt\n                           minima facilis, magni earum magnam libero.",
+        "link": "",
+        "year": "2020"
+    },
+    {
+        "title": "Pariatur a fuga doloremque?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Id at, sunt culpa debitis, porro officiis veniam repudiandae architecto, voluptatem eum quia error.\n                           Rerum culpa quisquam earum delectus, voluptatibus fuga enim velit facere nisi, dolorum eveniet\n                           dolores. Debitis, omnis.",
+        "link": "",
+        "year": "2019"
+    },
+    {
+        "title": "Ducimus libero ab ipsam!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Delectus eius quam asperiores molestias corporis unde, fugit quisquam inventore nemo rem, facilis\n                           possimus ipsam voluptates consequatur soluta distinctio eveniet eum doloremque accusamus? Assumenda\n                           dolorum voluptas ipsum dolorem corporis eveniet?",
+        "link": "",
+        "year": "2019"
+    },
+    {
+        "title": "Tenetur cum possimus fugit?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Dignissimos placeat laboriosam, asperiores quas magni maiores recusandae unde quos quia, sed earum\n                           accusantium reprehenderit quae praesentium assumenda ipsa eveniet, est fugit debitis cumque eligendi\n                           vero voluptatibus. Exercitationem, cumque dolore!",
+        "link": "",
+        "year": "2022"
+    },
+    {
+        "title": "Porro quis laboriosam perspiciatis.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Accusantium ea cum debitis expedita dolorum ad animi veniam facere, quos iste! Deserunt iste quam\n                           enim tenetur et obcaecati vel. Consequatur id deleniti ipsam odio reprehenderit error harum iusto\n                           illum.",
+        "link": "",
+        "year": "2021"
+    },
+    {
+        "title": "Perferendis doloremque veniam maiores!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Laboriosam ex error perspiciatis nobis facere quia aliquid quos sunt, quisquam eveniet excepturi id\n                           est dolores maxime veniam animi aperiam libero aspernatur ratione in accusamus molestias aut\n                           obcaecati quibusdam. Ratione!",
+        "link": "",
+        "year": "2024"
+    },
+    {
+        "title": "Magni quos vitae officiis.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Non est, itaque fugit, laborum nisi alias rem vel fugiat tempore excepturi cum. Eum et veniam quos\n                           commodi inventore adipisci, odit tempore rerum suscipit veritatis quidem a voluptatibus placeat\n                           blanditiis?",
+        "link": "",
+        "year": "2024"
+    }
+]

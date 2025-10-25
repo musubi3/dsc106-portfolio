@@ -1,0 +1,256 @@
+/* Auto mode (respects OS preference) */
+:root:not([color-scheme]) {
+  --interest-tag: oklch(95% 3% 200);
+  --tag-border: oklch(90% 3% 200);
+  --tag-shadow: oklch(0% 0% 0 / 0.1);
+  --project-text: black;
+  --intro: black;
+  --text-color: black;
+}
+
+/* Dark mode when OS prefers dark and no manual override */
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --interest-tag: oklch(35% 3% 200);
+    --tag-border: oklch(40% 3% 200);
+    --tag-shadow: oklch(0% 0% 0 / 0.3);
+    --project-text: oklch(90% 5% 200);
+    --text-color: oklch(85% 5% 200);
+    --intro: oklch(85% 5% 200);
+  }
+}
+
+:root[color-scheme="light"] {
+  --interest-tag: oklch(95% 3% 200);
+  --tag-border: oklch(90% 3% 200);
+  --tag-shadow: oklch(0% 0% 0 / 0.1);
+  --project-text: black;
+  --intro: black;
+  --text-color: black;
+}
+
+:root[color-scheme="dark"] {
+  --interest-tag: oklch(35% 3% 200);
+  --tag-border: oklch(40% 3% 200);
+  --tag-shadow: oklch(0% 0% 0 / 0.3);
+  --project-text: oklch(90% 5% 200);
+  --text-color: oklch(85% 5% 200);
+  --intro: oklch(85% 5% 200);
+}
+
+/* ANIMATION */
+.content.home>* {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.content.home h1 {
+  animation-delay: 0.1s;
+  background-size: 200% 200%;
+  animation: fadeInUp 0.8s ease 0.1s forwards, gradientShift 3s ease infinite 1s;
+}
+
+.content.home h2 {
+  animation-delay: 0.2s;
+}
+
+.content.home .intro {
+  animation-delay: 0.3s;
+}
+
+.content.home .interests {
+  animation-delay: 0.4s;
+}
+
+.content.home .hero-image {
+  animation-delay: 0.5s;
+}
+
+.content.home .featured-projects {
+  animation-delay: 0.6s;
+}
+
+.content.home .quick-stats {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.home h1 {
+  margin-bottom: 0.5em;
+  background: linear-gradient(135deg, var(--color-accent), oklch(65% 50% 200));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.hero-image img {
+  border-radius: 10px;
+}
+
+.hero-image {
+  margin-top: 1.5em;
+}
+
+.intro {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 2em;
+  color: var(--intro);
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+}
+
+.interest-tag {
+  background: var(--interest-tag);
+  border: 1px solid var(--tag-border);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.interest-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--tag-shadow);
+}
+
+.featured-projects {
+  margin: 4em 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 2em;
+  align-items: stretch
+}
+
+.projects a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.project-card h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  margin: 0 0 0.5em 0;
+  font-size: 1.3em;
+  line-height: 1.2;
+  min-height: 2.4em;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  padding: 1.5em;
+  animation-delay: 0.1s;
+  animation: fadeInUp 0.6s ease-out;
+  transition: all 0.2s ease;
+}
+
+.project-image-container {
+  width: 100%;
+  height: 120px;
+  /* Fixed height */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 0.8em;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project-card p {
+  margin: 0;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2em;
+  text-align: center;
+  margin: 3em 0;
+}
+
+.stat h3 {
+  font-size: 2em;
+  color: var(--color-accent);
+  margin-bottom: 0.5em;
+}
+
+.github-stats {
+  padding: 1em 0 2em 2rem;
+  border-radius: 8px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+}

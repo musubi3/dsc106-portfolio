@@ -2,31 +2,87 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="contact.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Lee: Contact</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="../global.js" type="module"></script>
 </head>
 
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../resume/index.html">Resume</a>
-        <a href="../projects/index.html">Projects</a>
-        <a href="index.html" class="current">Contact</a>
-        <a href="https://github.com/musubi3" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/justin-lee-634719352/" target="_blank">LinkedIn</a>
-    </nav>
-
     <div class="content">
         <h1>Contact</h1>
-        <form action="mailto:ju3tinlee@gmail.com" method="post" enctype="text/plain">
-            <label>Email: <input type="email" name="email" autocomplete="email"></label>
-            <label>Subject: <input type="text" name="subject" autocomplete="off"></label>
-            <label>Body: <textarea name="body" autocomplete="off"></textarea></label>
-            <button>Submit</button>
+
+        <!-- Toast container -->
+        <div id="toast" class="toast"></div>
+
+        <form action="https://formspree.io/f/xqayywoq" method="POST" class="contact-form" id="contactForm">
+            <label>
+                Your Email:
+                <input type="email" name="email" value="" required>
+            </label>
+
+            <label>
+                Subject:
+                <input type="text" name="subject" value="" required>
+            </label>
+
+            <label>
+                Message:
+                <textarea name="message" value="" required></textarea>
+            </label>
+
+            <button type="submit">Send Message</button>
         </form>
+
+        <script>
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const button = this.querySelector('button[type="submit"]');
+                    const originalText = button.textContent;
+
+                    button.textContent = 'Sending...';
+                    button.disabled = true;
+
+                    try {
+                        const response = await fetch(this.action, {
+                            method: 'POST',
+                            body: new FormData(this),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            showToast('🎉 Message sent! I\'ll get back to you soon.', 'success');
+                            this.reset();
+                        } else {
+                            showToast('❌ Failed to send message. Please try again.', 'error');
+                        }
+                    } catch (error) {
+                        showToast('❌ Error sending message. Please check your connection.', 'error');
+                    } finally {
+                        button.textContent = originalText;
+                        button.disabled = false;
+                    }
+                });
+            }
+
+            function showToast(message, type = 'success') {
+                const toast = document.getElementById('toast');
+                toast.textContent = message;
+                toast.className = `toast ${type}`;
+                toast.classList.add('show');
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 4000);
+            }
+        </script>
     </div>
 </body>
 
