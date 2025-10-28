@@ -1,5 +1,12 @@
 [
     {
+        "title": "Racial Disparities in Police Misconduct Allegations",
+        "image": "https://i0.wp.com/www.thecity.nyc/wp-content/uploads/2022/09/nypd_dym_1_crop.jpg?fit=2000%2C1333&ssl=1",
+        "description": "Analyzing the relationship between race and police allegations.",
+        "link": "https://musubi3.github.io/police-allegation-analysis",
+        "year": "2025"
+    },
+    {
         "title": "The Relationship Between Calories and Recipe Rating",
         "image": "https://store.cofo.edu/cdn/shop/files/cookbookopen.png?v=1696951540",
         "description": "A data-driven analysis exploring how calories impact average recipe ratings, using Python and\n                      interactive plots.",
@@ -73,13 +80,6 @@
         "title": "Perferendis doloremque veniam maiores!",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Laboriosam ex error perspiciatis nobis facere quia aliquid quos sunt, quisquam eveniet excepturi id\n                           est dolores maxime veniam animi aperiam libero aspernatur ratione in accusamus molestias aut\n                           obcaecati quibusdam. Ratione!",
-        "link": "",
-        "year": "2024"
-    },
-    {
-        "title": "Magni quos vitae officiis.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Non est, itaque fugit, laborum nisi alias rem vel fugiat tempore excepturi cum. Eum et veniam quos\n                           commodi inventore adipisci, odit tempore rerum suscipit veritatis quidem a voluptatibus placeat\n                           blanditiis?",
         "link": "",
         "year": "2024"
     }
