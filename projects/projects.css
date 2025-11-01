@@ -57,7 +57,6 @@
 .project-card p {
   margin: 0;
   flex-grow: 1;
-  /* Push everything to take equal space */
   line-height: 1.5;
 }
 
@@ -83,20 +82,16 @@
   overflow: visible;
 }
 
-/* Styles for the new chart container */
 .chart-container {
   display: flex;
   flex-wrap: wrap;
-  /* Allows legend to wrap on small screens */
   align-items: center;
   gap: 2em;
   margin-block: 2em;
 }
 
-/* Style the legend list */
 .legend {
   flex: 1;
-  /* Allows legend to take remaining space */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 0.5em;
@@ -107,14 +102,12 @@
   margin: 0;
 }
 
-/* Style each legend item */
 .legend li {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
 
-/* Style the color swatch */
 .swatch {
   width: 1em;
   height: 1em;
@@ -123,7 +116,6 @@
   display: inline-block;
 }
 
-/* --- Added Styles for Search Bar --- */
 .searchBar {
   width: 100%;
   padding: 0.75em 1em;
@@ -134,7 +126,6 @@
   border: 1px solid var(--input-border);
   border-radius: 8px;
 
-  /* Remove the default browser appearance */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -153,33 +144,23 @@
     transition: opacity 300ms;
 }
 
-/* On hover, fade out non-hovered paths */
 #projects-pie-plot:has(path:hover) path:not(:hover) {
     opacity: 0.5;
 }
 
-/* Style for the selected wedge and legend item */
-.selected {
-    /* --color is a CSS variable we'll use */
-    --color: var(--color-accent) !important; /* A distinct highlight color (purple-ish) */
-}
-
 .selected.wedge {
-    fill: var(--color); /* Apply highlight color to the wedge */
+    fill: var(--color-accent);
 }
 
-/* Style the legend item when its wedge is selected */
 .selected.legend-item {
     font-weight: bold;
 }
 
-/* Also make the legend items clickable */
 .legend li {
     cursor: pointer;
     transition: opacity 300ms;
 }
 
-/* Fade out non-selected legend items when one is selected */
 .legend:has(.selected) li:not(.selected) {
     opacity: 0.5;
 }

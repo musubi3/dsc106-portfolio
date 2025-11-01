@@ -397,11 +397,12 @@ code {
 }
 
 .toc a {
-  color: var(--color-accent);
+  color: var(--link);
   text-decoration: none;
 }
 
 .toc a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
