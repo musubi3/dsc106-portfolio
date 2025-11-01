@@ -35,6 +35,10 @@
 
   --table-hover: oklch(from var(--color-accent) 99% 3% h);
   --column-text: oklch(30% 5% 200);
+
+  --input-text: oklch(30% 3% 200);
+  --input-border: oklch(80% 3% 200);
+  --input-focused: oklch(from var(--color-accent) 80% c h);
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -69,6 +73,10 @@
 
     --table-hover: oklch(from var(--color-accent) 30% 10% h);
     --column-text: oklch(85% 5% 200);
+
+    --input-text: oklch(80% 3% 200);
+    --input-border: oklch(45% 3% 200);
+    --input-focused: oklch(from var(--color-accent) 45% c h);
   }
 }
 
@@ -102,6 +110,10 @@
 
   --table-hover: oklch(from var(--color-accent) 99% 3% h);
   --column-text: oklch(30% 5% 200);
+
+  --input-text: oklch(30% 3% 200);
+  --input-border: oklch(80% 3% 200);
+  --input-focused: oklch(from var(--color-accent) 80% c h);
 }
 
 :root[color-scheme="dark"] {
@@ -134,6 +146,10 @@
 
   --table-hover: oklch(from var(--color-accent) 30% 10% h);
   --column-text: oklch(85% 5% 200);
+
+  --input-text: oklch(80% 3% 200);
+  --input-border: oklch(45% 3% 200);
+  --input-focused: oklch(from var(--color-accent) 45% c h);
 }
 
 html {

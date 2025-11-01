@@ -71,8 +71,12 @@
   animation-delay: 0.6s;
 }
 
-.content.home .quick-stats {
+.content.home .github-container {
   animation-delay: 0.7s;
+}
+
+.content.home .quick-stats {
+  animation-delay: 0.8s;
 }
 
 @keyframes fadeInUp {
@@ -160,25 +164,25 @@
 
 .project-card h3 {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
   margin: 0 0 0.5em 0;
   font-size: 1.3em;
   line-height: 1.2;
-  min-height: 2.4em;
+  min-height: 3.6em;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  height: 85%;
+  height: 100%;
   padding: 1.5em;
   animation-delay: 0.1s;
   animation: fadeInUp 0.6s ease-out;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .project-image-container {
@@ -223,6 +227,12 @@
   background: var(--card);
   border: 1px solid var(--card-border);
   box-shadow: 0 4px 12px var(--card-shadow);
+  transition: all 0.2s ease;
+}
+
+.github-stats:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--card-hover);
 }
 
 #profile-stats dl {

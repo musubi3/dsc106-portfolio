@@ -29,7 +29,18 @@ async function displayGitHubStats() {
   }
 }
 
+async function updateProjectCount() {
+  const projects = await fetchJSON('./lib/projects.json');
+
+  const countElement = document.getElementById('project-count')
+
+  if (countElement) {
+    countElement.textContent = `${projects.length}+`;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
-    await displayLatestProjects();
-    await displayGitHubStats();
+  await displayLatestProjects();
+  await displayGitHubStats();
+  await updateProjectCount();
 });
