@@ -1,4 +1,6 @@
-// PICTURE IN PICTURE ERROR HANDLER
+export const GITHUB_USER = 'musubi3';
+
+
 try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); } catch (e) { }
 
 // AUTOMATIC NAV
@@ -20,14 +22,15 @@ function $$(selector) {
 document.addEventListener('DOMContentLoaded', function () {
   const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
     ? "/"
-    : "https://musubi3.github.io/dsc106-portfolio/";
+    : `https://${GITHUB_USER}.github.io/dsc106-portfolio/`;
 
   let pages = [
     { url: 'index.html', title: 'Home' },
     { url: 'resume/index.html', title: 'Resume' },
     { url: 'projects/index.html', title: 'Projects' },
+    { url: 'meta/index.html', title: 'Meta' },
     { url: 'contact/index.html', title: 'Contact' },
-    { url: 'https://github.com/musubi3', title: 'GitHub' },
+    { url: `https://github.com/${GITHUB_USER}`, title: 'GitHub' },
     { url: 'https://www.linkedin.com/in/justin-lee-634719352/', title: 'LinkedIn' }
   ];
 
@@ -238,6 +241,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h3') 
  * @param {string} username - The GitHub username to look up.
  * @returns {Promise<Object>} A promise that resolves to the user's data.
  */
-export async function fetchGitHubData(username='musubi3') {
+export async function fetchGitHubData(username=`${GITHUB_USER}`) {
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
