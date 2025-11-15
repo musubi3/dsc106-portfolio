@@ -1,5 +1,12 @@
 [
     {
+        "title": "Visualizing Boston's Bike Share Network",
+        "image": "https://i.postimg.cc/fb2P1RMn/image-2025-11-14-210141226.png",
+        "description": "This interactive map visualizes the Boston and Cambridge BlueBikes network, allowing users to explore how bike traffic volume and flow change throughout the day.",
+        "link": "https://musubi3.github.io/boston-bike-watching",
+        "year": "2025"
+    },
+    {
         "title": "Persuasive or Deceptive Visualization?",
         "image": "https://i0.wp.com/www.thecity.nyc/wp-content/uploads/2022/09/nypd_dym_1_crop.jpg?fit=2000%2C1333&ssl=1",
         "description": "Highlights the thin line between persuasive and deceptive visualizations by analyzing the relationship between race and police allegations.",
@@ -26,13 +33,6 @@
         "description": "A Node.js module that makes interacting with PokéAPI easier.",
         "link": "https://musubi3.github.io/pokemon.js/?theme=dark",
         "year": "2021"
-    },
-    {
-        "title": "Dolorem consequuntur asperiores ratione.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Temporibus consequatur assumenda voluptas numquam sed fugit quae neque quisquam eius necessitatibus\n                           nostrum dolorem labore illo ducimus asperiores sunt praesentium expedita aliquid porro aut,\n                           blanditiis culpa est at rem. Obcaecati.",
-        "link": "",
-        "year": "2020"
     },
     {
         "title": "Repellat doloremque sit id?",
