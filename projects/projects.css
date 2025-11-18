@@ -122,6 +122,7 @@
   margin-bottom: 2em;
   font-size: 1em;
 
+  background: var(--input);
   color: var(--input-text);
   border: 1px solid var(--input-border);
   border-radius: 8px;
@@ -132,11 +133,11 @@
 }
 
 .searchBar::placeholder {
-  color: var(--input-text);
+  color: var(--input-placeholder);
 }
 
 .searchBar:focus {
-  outline: 0.5px solid var(--input-focused);
+  outline: none
 }
 
 #projects-pie-plot path {

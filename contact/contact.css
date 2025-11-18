@@ -7,7 +7,7 @@
 /* Dark mode when OS prefers dark and no manual override */
 @media (prefers-color-scheme: dark) {
   :root:not([color-scheme]) {
-    --send-button: oklch(40% 3% 200);
+    --send-button: oklch(50% 3% 200);
     --toast-shadow: oklch(0% 0% 0 / 0.7);
   }
 }
@@ -19,7 +19,7 @@
 }
 
 :root[color-scheme="dark"] {
-  --send-button: oklch(40% 3% 200);
+  --send-button: oklch(50% 4% 200);
   --toast-shadow: oklch(0% 0% 0 / 0.7);
 }
 
@@ -45,6 +45,7 @@ button {
 input,
 textarea {
   padding: 0.5em;
+  background: var(--input);
   border: 1px solid var(--input-border);
   color: var(--input-text);
   border-radius: 4px;
@@ -57,21 +58,22 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline: 0.5px solid var(--input-focused);
+  outline: none;
 }
 
 button {
   padding: 0.75em 1.5em;
   background-color: var(--send-button);
-  color: white;
   border: none;
+  color: white;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 button:hover {
-  background-color: var(--color-accent);
+  background-color: var(--tag-hover);
+  color: white;
 }
 
 .content h1,

@@ -36,9 +36,15 @@
   --table-hover: oklch(from var(--color-accent) 99% 3% h);
   --column-text: oklch(30% 5% 200);
 
+  --input: oklch(100% 0 360);
   --input-text: oklch(30% 3% 200);
-  --input-border: oklch(80% 3% 200);
+  --input-border: oklch(85% 3% 200);
   --input-focused: oklch(from var(--color-accent) 80% c h);
+  --input-placeholder: oklch(40% 3% 200);
+  --input-options: rgba(255, 255, 255, 0.8);
+
+  --scroll: oklch(80% 0 360 / 0.7);
+  --scroll-hover: oklch(70% 0 360 / 0.7);
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -74,9 +80,15 @@
     --table-hover: oklch(from var(--color-accent) 30% 10% h);
     --column-text: oklch(85% 5% 200);
 
+    --input: oklch(35% 4% 200);
     --input-text: oklch(80% 3% 200);
-    --input-border: oklch(45% 3% 200);
+    --input-border: none;
     --input-focused: oklch(from var(--color-accent) 45% c h);
+    --input-placeholder: oklch(70% 3% 200);
+    --input-options: oklch(35% 4% 200 / 0.8);
+
+    --scroll: oklch(55% 4% 200 / 0.7);
+    --scroll-hover: oklch(65% 4% 200 / 0.7);
   }
 }
 
@@ -111,9 +123,15 @@
   --table-hover: oklch(from var(--color-accent) 99% 3% h);
   --column-text: oklch(30% 5% 200);
 
+  --input: oklch(100% 0 360);
   --input-text: oklch(30% 3% 200);
-  --input-border: oklch(80% 3% 200);
+  --input-border: oklch(85% 3% 200);
   --input-focused: oklch(from var(--color-accent) 80% c h);
+  --input-placeholder: oklch(40% 3% 200);
+  --input-options: rgba(255, 255, 255, 0.8);
+
+  --scroll: oklch(80% 0 360 / 0.7);
+  --scroll-hover: oklch(70% 0 360 / 0.7);
 }
 
 :root[color-scheme="dark"] {
@@ -147,9 +165,15 @@
   --table-hover: oklch(from var(--color-accent) 30% 10% h);
   --column-text: oklch(85% 5% 200);
 
+  --input: oklch(35% 4% 200);
   --input-text: oklch(80% 3% 200);
-  --input-border: oklch(45% 3% 200);
+  --input-border: none;
   --input-focused: oklch(from var(--color-accent) 45% c h);
+  --input-placeholder: oklch(70% 3% 200);
+  --input-options: oklch(35% 4% 200 / 0.8);
+
+  --scroll: oklch(55% 4% 200 / 0.7);
+  --scroll-hover: oklch(65% 4% 200 / 0.7);
 }
 
 html {
