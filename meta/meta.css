@@ -1,3 +1,26 @@
+/* Auto mode (respects OS preference) */
+:root:not([color-scheme]) {
+  --slider: oklch(from var(--input) calc(l - 0.15) c h);
+}
+
+/* Dark mode when OS prefers dark and no manual override */
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --slider: oklch(from var(--input) calc(l + 0.1) c h);
+  }
+}
+
+/* Manual overrides */
+:root[color-scheme="light"] {
+  --slider: oklch(from var(--input) calc(l - 0.15) c h);
+  --thumb-border: oklch(from var(--color-accent) calc(l - 0.05) c h);
+}
+
+:root[color-scheme="dark"] {
+  --slider: oklch(from var(--input) calc(l + 0.1) c h);
+  --thumb-border: oklch(from var(--color-accent) calc(l + 0.05) c h);
+}
+
 .content>* {
   animation: fadeInUp 0.6s ease-out;
 }
@@ -21,9 +44,16 @@
   font-size: 1.8em;
 }
 
+#stats { 
+  padding: 1em 0 2em 2em;
+}
+
+#language-breakdown {
+  padding: 1em;
+}
+
 #stats,
 #language-breakdown {
-  padding: 1em 0 2em 2rem;
   border-radius: 8px;
   background: var(--card);
   border: 1px solid var(--card-border);
@@ -40,7 +70,7 @@
 #stats dl {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 1rem;
+  gap: 1rem 3rem;
   margin: 0;
   padding: 0;
 }
@@ -82,9 +112,15 @@
 }
 
 circle {
-  transition: 200ms;
+  transition: all 200ms;
   transform-origin: center;
   transform-box: fill-box;
+}
+
+@starting-style {
+  circle {
+    r: 0;
+  }
 }
 
 circle:hover {
@@ -155,7 +191,7 @@ dl.lang-stats {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
-  gap: 1rem 5rem;
+  gap: 1rem 1rem;
   margin: 0;
   padding: 0;
 }
@@ -182,6 +218,167 @@ dl.lang-stats dd {
   font-size: 1.1rem;
   font-style: italic;
   color: var(--text-color);
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* 1. Reset the browser's default styling */
+#commit-progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    background: var(--slider); /* Light mode track color */
+    border-radius: 8px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+/* Hover effect */
+#commit-progress:hover {
+    opacity: 1;
+}
+
+/* 2. Custom styling for the THUMB (Chrome/Safari/Edge) */
+#commit-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px; /* Make it nice and big */
+    height: 25px;
+    border-radius: 50%; 
+    background: var(--color-accent); /* Use your cyan color */
+    cursor: pointer;
+    border: 2px solid var(--thumb-border); /* Adds a nice border to pop against dark backgrounds */
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* 2b. Custom styling for the THUMB (Firefox) */
+#commit-progress::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* CORRECTED: Use #files to match the ID in your HTML */
+#files {
+    /* RESTORE THIS: This keeps the dots aligned with names */
+    display: grid; 
+    grid-template-columns: 220px 1fr;
+    gap: 0.5rem;
+    
+    /* ADD THIS: This handles the scrolling if the list is long */
+    margin-top: 1rem;
+    flex-grow: 1;      /* Fill remaining space below chart */
+    overflow-y: auto;  /* Scroll internally */
+    min-height: 0;     /* Required for nested scrolling */
+}
+
+/* Use subgrid to align children */
+#files > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    background: transparent;
+    margin-bottom: 1rem;
+}
+
+#files dt {
+    grid-column: 1;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+#files dt small {
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.7;
+    margin-top: 0.2em;
+}
+
+/* This is the key rule that was failing! */
+#files dd {
+    grid-column: 2;
+    display: flex;       /* <--- This makes them sit side-by-side */
+    flex-wrap: wrap;     /* <--- This makes them wrap to the next line */
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin-left: 0;
+}
+
+.line {
+    display: block; /* Fixed: using block or flex here works, but block is simpler for dots */
+    width: 0.5em;
+    aspect-ratio: 1;
+    background: var(--color);
+    border-radius: 50%;
+}
+
+/* Scrollytelling Layout */
+#scrolly-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* The scrolling text area */
+#scatter-story {
+    position: relative;
+    /* Ensure text sits on top if overlaps occur */
+    z-index: 10; 
+}
+
+/* Individual steps (commit descriptions) */
+.step {
+    min-height: 160px; /* Allow it to be small if content is short */
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Subtle bg */
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    transition: background 0.2s;
+}
+
+.step:last-child {
+    margin-bottom: 45vh;
+}
+
+.step.is-active {
+    background: var(--card); 
+    box-shadow: 0 0 10px var(--card-shadow);
+}
+
+#scatter-plot {
+    position: sticky;
+    
+    /* FIX 1: Push it down so the Nav doesn't cover it */
+    /* Adjust this value (4rem) if your nav is taller/shorter */
+    top: 7rem; 
+    
+    /* Make it fill the rest of the screen height */
+    height: calc(100vh - 11rem); 
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent the whole page from stretching */
+    z-index: 1;
+}
+
+/* 2. Fix the Chart Size */
+#chart {
+    flex-shrink: 0; /* Stop the chart from getting squished */
+    width: 100%;
+    height: auto; 
 }
